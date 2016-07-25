@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
+import ListItem from '../components/list-item';
+
 class ItemList extends Component {
   constructor(props) {
     super(props);
@@ -9,7 +11,7 @@ class ItemList extends Component {
 
   renderList() {
     return this.props.tasks.map((task) => {
-      return <li key={task.id}>{task.name}</li>
+      return <ListItem key={task.id} name={task.name} />
     })
   }
 
