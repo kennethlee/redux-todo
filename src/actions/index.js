@@ -6,4 +6,3 @@ export function addTask(task) {
     payload: task,
   };
 }
-
