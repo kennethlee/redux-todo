@@ -5,7 +5,7 @@ import filterReducer from './reducer_filter';
 
 const rootReducer = combineReducers({
   tasks: taskReducer,
-  filter: filterReducer,
+  activeFilter: filterReducer,
 });
 
 export default rootReducer;

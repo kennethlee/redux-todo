@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-
+import Radium from 'radium';
 import { addTask } from '../actions/';
-
+import styles from '../styles';
+@Radium
 class InputForm extends Component {
   constructor(props) {
     super(props);
@@ -31,14 +32,16 @@ class InputForm extends Component {
 
   render() {
     return (
-      <form onSubmit={this.onFormSubmit}>
-        <input
-          onChange={this.onInputChange}
-          value={this.state.term}
-          placeholder="Add a todo."
-        />
-        <button type="submit">Submit</button>
-      </form>
+      <div style={styles.formContainer}>
+        <form onSubmit={this.onFormSubmit}>
+          <input
+            style={styles.inputField}
+            onChange={this.onInputChange}
+            value={this.state.term}
+            placeholder="Shit to do?"
+          />
+        </form>
+      </div>
     );
   }
 }
@@ -48,4 +51,3 @@ function mapDispatchToProps(dispatch) {
 }
 
 export default connect(null, mapDispatchToProps)(InputForm);
-

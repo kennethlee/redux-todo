@@ -20,6 +20,15 @@ module.exports = {
     contentBase: './dist',
     hot: true,
   },
+  query: {
+    cacheDirectory: true,
+    plugins: [
+      'transform-runtime',
+      'add-module-exports',
+      'transform-decorators-legacy',
+    ],
+    presets: ['es2015', 'react'],
+  },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
   ],
