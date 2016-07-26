@@ -11,23 +11,29 @@ export function markComplete(task) {
   return {
     type: 'MARK_COMPLETE',
     payload: task,
-  }
+  };
 }
 
 export function filterActive() {
   return {
     type: 'FILTER_ACTIVE',
-  }
+  };
 }
 
 export function showAll() {
   return {
-    type: 'SHOW_ALL'
-  }
+    type: 'SHOW_ALL',
+  };
 }
 
 export function filterCompleted() {
   return {
-    type: "FILTER_COMPLETED"
-  }
+    type: 'FILTER_COMPLETED',
+  };
+}
+
+export function clearCompleted() {
+  return {
+    type: 'CLEAR_COMPLETED',
+  };
 }

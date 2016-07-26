@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { showAll, filterActive, filterCompleted } from '../actions';
+import { showAll, filterActive, filterCompleted, clearCompleted } from '../actions';
 
 
 class ButtonBar extends Component {
@@ -18,7 +18,7 @@ class ButtonBar extends Component {
         <button onClick={this.props.filterCompleted}>
           Completed
         </button>
-        <button>Clear Complete</button>
+        <button onClick={this.props.clearCompleted}>Clear Complete</button>
       </div>
     )
   }
@@ -29,6 +29,7 @@ function mapDispatchToProps(dispatch) {
     showAll: showAll,
     filterActive: filterActive,
     filterCompleted: filterCompleted,
+    clearCompleted: clearCompleted,
    }, dispatch)
 }
 

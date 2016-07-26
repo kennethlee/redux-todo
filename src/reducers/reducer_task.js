@@ -15,7 +15,9 @@ export default function (state = [], action) {
           task.finished ? task.finished = false : task.finished = true;
         }
         return task;
-      });    
+      });
+    case 'CLEAR_COMPLETED':
+      return state.filter((task) => !task.finished);
     default:
       return state;
   }
