@@ -6,3 +6,10 @@ export function addTask(task) {
     payload: task,
   };
 }
+
+export function markComplete(task) {
+  return {
+    type: 'MARK_COMPLETE',
+    payload: task,
+  }
+}

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
+import { markComplete } from '../actions';
 import ListItem from '../components/list-item';
 
 class ItemList extends Component {
@@ -11,8 +12,11 @@ class ItemList extends Component {
 
   renderList() {
     return this.props.tasks.map((task) => {
-      return <ListItem key={task.id} name={task.name} />
-    })
+      return (<ListItem
+        task={task}
+        markComplete={this.props.markComplete}
+      />);
+    });
   }
 
   render() {
@@ -26,4 +30,8 @@ function mapStateToProps(state) {
   return {tasks: state.tasks}
 }
 
-export default connect(mapStateToProps)(ItemList);
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({ markComplete: markComplete }, dispatch);
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(ItemList);
