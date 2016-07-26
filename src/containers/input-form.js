@@ -38,7 +38,7 @@ class InputForm extends Component {
             style={styles.inputField}
             onChange={this.onInputChange}
             value={this.state.term}
-            placeholder="Shit to do?"
+            placeholder='Add a task'
           />
         </form>
       </div>

@@ -3,7 +3,9 @@ import Radium from 'radium';
 import styles from '../styles';
 
 function colorComplete(bool) {
-  return bool ? { textDecoration: "line-through", color: '#79BD9A' } : {}
+  return bool
+    ? { textDecoration: 'line-through', color: '#79BD9A' }
+    : {};
 }
 
 const ListItem = (props) => {
@@ -14,6 +16,6 @@ const ListItem = (props) => {
   >
     {props.task.name}
   </div>);
-}
+};
 
 module.exports = Radium(ListItem);

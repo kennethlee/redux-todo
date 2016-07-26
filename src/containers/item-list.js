@@ -6,14 +6,8 @@ import { markComplete } from '../actions';
 import ListItem from '../components/list-item';
 
 class ItemList extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   renderList() {
-
     return this.props.tasks.map((task) => {
-
       if (this.props.activeFilter === "ALL") {
         return (<ListItem
           task={task}
@@ -34,19 +28,18 @@ class ItemList extends Component {
           />);
         }
       }
-
     });
   }
 
   render() {
     return (
       <div>{this.renderList()}</div>
-    )
+    );
   }
 }
 
 function mapStateToProps(state) {
-  return {tasks: state.tasks, activeFilter: state.activeFilter}
+  return { tasks: state.tasks, activeFilter: state.activeFilter };
 }
 
 function mapDispatchToProps(dispatch) {

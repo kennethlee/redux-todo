@@ -8,34 +8,45 @@ import styles from '../styles';
 
 @Radium
 class ButtonBar extends Component {
-  constructor(props) {
-    super(props)
-  }
-
   selectActive(filter) {
-    console.log("GETS HERE")
     if (this.props.activeFilter === filter) {
-      return styles.active
+      return styles.active;
     }
   }
 
-  render () {
+  render() {
     return (
       <div>
-        <div key={0} style={Object.assign({}, styles.buttons,  this.selectActive("ALL"))}
-            onClick={this.props.showAll}>
-              All
+        <div
+          key={0}
+          style={Object.assign({}, styles.buttons, this.selectActive('ALL'))}
+          onClick={this.props.showAll}
+        >
+          All
         </div>
-        <div key={1} style={Object.assign({}, styles.buttons, this.selectActive("ACTIVE"))}
-          onClick={this.props.filterActive}>Active</div>
-        <div key={2} style={Object.assign({}, styles.buttons, this.selectActive("COMPLETED"))}
-          onClick={this.props.filterCompleted}>
+        <div
+          key={1}
+          style={Object.assign({}, styles.buttons, this.selectActive('ACTIVE'))}
+          onClick={this.props.filterActive}
+        >
+          Active
+        </div>
+        <div
+          key={2}
+          style={Object.assign({}, styles.buttons, this.selectActive('COMPLETED'))}
+          onClick={this.props.filterCompleted}
+        >
           Completed
         </div>
-        <div key={3} style={styles.buttons}
-              onClick={this.props.clearCompleted}>Clear Complete</div>
+        <div
+          key={3}
+          style={styles.buttons}
+          onClick={this.props.clearCompleted}
+        >
+          Clear Complete
+        </div>
       </div>
-    )
+    );
   }
 }
 
@@ -49,7 +60,7 @@ function mapDispatchToProps(dispatch) {
     filterActive: filterActive,
     filterCompleted: filterCompleted,
     clearCompleted: clearCompleted,
-   }, dispatch)
+  }, dispatch);
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(ButtonBar);
