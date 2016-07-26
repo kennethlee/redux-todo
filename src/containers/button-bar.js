@@ -13,7 +13,6 @@ class ButtonBar extends Component {
   }
 
   selectActive(filter) {
-    console.log("GETS HERE")
     if (this.props.activeFilter === filter) {
       return styles.active
     }
