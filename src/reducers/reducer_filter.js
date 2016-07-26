@@ -4,6 +4,8 @@ export default function(state="ALL", action) {
       return "ALL"
     case "FILTER_ACTIVE":
       return "ACTIVE"
+    case "FILTER_COMPLETED":
+      return "COMPLETED"
     default:
       return state;
   }

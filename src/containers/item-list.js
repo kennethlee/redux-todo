@@ -26,8 +26,15 @@ class ItemList extends Component {
             markComplete={this.props.markComplete}
           />);
         }
+      } else if (this.props.filter === "COMPLETED") {
+        if (task.finished) {
+          return (<ListItem
+            task={task}
+            markComplete={this.props.markComplete}
+          />);
+        }
       }
-      
+
     });
   }
 
