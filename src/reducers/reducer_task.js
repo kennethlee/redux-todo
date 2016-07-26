@@ -15,7 +15,7 @@ export default function (state = [], action) {
           task.finished ? task.finished = false : task.finished = true;
         }
         return task;
-      });
+      });    
     default:
       return state;
   }

@@ -11,11 +11,23 @@ class ItemList extends Component {
   }
 
   renderList() {
+
     return this.props.tasks.map((task) => {
-      return (<ListItem
-        task={task}
-        markComplete={this.props.markComplete}
-      />);
+
+      if (this.props.filter === "ALL") {
+        return (<ListItem
+          task={task}
+          markComplete={this.props.markComplete}
+        />);
+      } else if (this.props.filter === "ACTIVE") {
+        if (!task.finished) {
+          return (<ListItem
+            task={task}
+            markComplete={this.props.markComplete}
+          />);
+        }
+      }
+      
     });
   }
 
@@ -27,7 +39,7 @@ class ItemList extends Component {
 }
 
 function mapStateToProps(state) {
-  return {tasks: state.tasks}
+  return {tasks: state.tasks, filter: state.filter}
 }
 
 function mapDispatchToProps(dispatch) {

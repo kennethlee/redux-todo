@@ -13,3 +13,21 @@ export function markComplete(task) {
     payload: task,
   }
 }
+
+export function filterActive() {
+  return {
+    type: 'FILTER_ACTIVE',
+  }
+}
+
+export function showAll() {
+  return {
+    type: 'SHOW_ALL'
+  }
+}
+
+export function filterCompleted() {
+  return {
+    type: "FILTER_COMPLETED"
+  }
+}
