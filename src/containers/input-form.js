@@ -5,6 +5,7 @@ import Radium from 'radium';
 import { addTask } from '../actions/';
 import styles from '../styles';
 @Radium
+
 class InputForm extends Component {
   constructor(props) {
     super(props);
