@@ -1,8 +1,8 @@
-### React / Redux To-do app
+### React / Redux To-Do App
 
-A simple to-do app created for the purpose of learning Redux.
+A simple to-do app created for the purpose of learning Redux. Styling via Radium.
 
-Authors: @thomasjinlo and @kennethlee
+Authors: [@thomaslo](https://github.com/thomasjinlo) and [@kennethlee](https://github.com/kennethlee)
 
 #### Highlights
 
@@ -10,3 +10,6 @@ Authors: @thomasjinlo and @kennethlee
 - React
 - Redux
 - Radium
+- webpack
+
+![redux-todo](/img/redux-todo.png)
