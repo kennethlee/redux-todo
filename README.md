@@ -1,4 +1,4 @@
-### React / Redux To-Do App
+### [React / Redux To-Do App](http://redux-todo.surge.sh)
 
 A simple to-do app created for the purpose of learning Redux. Styling via Radium.
 
