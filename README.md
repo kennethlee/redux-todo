@@ -12,4 +12,6 @@ Authors: [@thomaslo](https://github.com/thomasjinlo) and [@kennethlee](https://g
 - Radium
 - webpack
 
-![redux-todo](/img/redux-todo.png)
+<div align="center">
+  <a href="http://redux-todo.surge.sh"><img src="/img/redux-todo.png" /></a>
+</div>
